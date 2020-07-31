@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud3.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice.iml" filepath="$PROJECT_DIR$/microservice/microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-common/microservice-common.iml" filepath="$PROJECT_DIR$/microservice/microservice-common/microservice-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-euraka-server-1083/microservice-euraka-server-1083.iml" filepath="$PROJECT_DIR$/microservice/microservice-euraka-server-1083/microservice-euraka-server-1083.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-euraka-server-1084/microservice-euraka-server-1084.iml" filepath="$PROJECT_DIR$/microservice/microservice-euraka-server-1084/microservice-euraka-server-1084.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-euraka-server-1085/microservice-euraka-server-1085.iml" filepath="$PROJECT_DIR$/microservice/microservice-euraka-server-1085/microservice-euraka-server-1085.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-student-consumer-2001/microservice-student-consumer-2001.iml" filepath="$PROJECT_DIR$/microservice/microservice-student-consumer-2001/microservice-student-consumer-2001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice/microservice-student-provider-1001/microservice-student-provider-1001.iml" filepath="$PROJECT_DIR$/microservice/microservice-student-provider-1001/microservice-student-provider-1001.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-student-consumer-2001" />
+        <module name="microservice-common" />
+        <module name="microservice-student-provider-1001" />
+        <module name="microservice-euraka-server-1084" />
+        <module name="microservice-euraka-server-1083" />
+        <module name="microservice-euraka-server-1085" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice" target="1.8" />
+      <module name="microservice-common" target="1.8" />
+      <module name="microservice-euraka-server-1083" target="1.8" />
+      <module name="microservice-euraka-server-1084" target="1.8" />
+      <module name="microservice-euraka-server-1085" target="1.8" />
+      <module name="microservice-student-consumer-2001" target="1.8" />
+      <module name="microservice-student-provider-1001" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
