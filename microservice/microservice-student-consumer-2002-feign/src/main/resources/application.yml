@@ -1,0 +1,9 @@
+server:
+  port: 80
+  context-path: /
+
+eureka:
+  client:
+    register-with-eureka: false #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
+    service-url:
+      defaultZone: http://dd1.linka39.top:1083/eureka/,http://dd2.linka39.top:1084/eureka/ # 集群

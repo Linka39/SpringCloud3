@@ -69,5 +69,6 @@
       <module>microservice-euraka-server-1085</module>
       <module>microservice-student-provider-1003</module>
       <module>microservice-student-provider-1004</module>
+      <module>microservice-student-consumer-2002-feign</module>
   </modules>
 </project>

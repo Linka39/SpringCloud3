@@ -1,6 +1,8 @@
 package com.linka39.controller;
 
 import java.util.List;
+
+import com.linka39.service.StudentClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -17,9 +19,7 @@ import com.linka39.entity.Student;
 public class StudentConsumerController {
 
 	@Autowired
-	private RestTemplate restTemplate;
-    //访问服务提供者时是按 大写字符访问的
-	private final static String PRE_HOST="http://MICROSERVICE-STUDENT";
+	private StudentClientService studentClientService;
 
     /**
      * 添加或者修改学生信息
@@ -27,19 +27,17 @@ public class StudentConsumerController {
      * @return
      */
     @PostMapping(value="/save")
-
     public boolean save( Student student){
-    	return restTemplate.postForObject(PRE_HOST+"/student/save", student, Boolean.class);
+    	return studentClientService.save(student);
     }
 
     /**
      * 查询学生信息
      * @return
      */
-    @SuppressWarnings("unchecked")
 	@GetMapping(value="/list")
     public List<Student> list(){
-        return restTemplate.getForObject(PRE_HOST+"/student/list", List.class);
+        return studentClientService.list();
     }
 
     /**
@@ -48,7 +46,7 @@ public class StudentConsumerController {
      */
     @GetMapping(value="/get/{id}")
     public Student get(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(PRE_HOST+"/student/get/"+id, Student.class);
+        return studentClientService.get(id);
     }
 
     /**
@@ -57,7 +55,7 @@ public class StudentConsumerController {
      */
     @GetMapping(value="/delete/{id}")
     public boolean delete(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(PRE_HOST+"/student/delete/"+id, Boolean.class);
+        return studentClientService.delete(id);
     }
 
 }
