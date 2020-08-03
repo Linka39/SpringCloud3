@@ -21,12 +21,20 @@ eureka:
   instance:
     hostname: localhost  #eureka客户端主机实例名称
     appname: microservice-student  #客户端服务名
-    instance-id: microservice-student:1004 #客户端实例名称
+    instance-id: microservice-student-hystrix:1004 #客户端实例名称
     prefer-ip-address: true #显示IP
   client:
     service-url:
       # defaultZone: http://localhost:1083/eureka   #把服务注册到eureka注册中心
       defaultZone: http://dd1.linka39.top:1083/eureka/,http://dd2.linka39.top:1084/eureka/ # 集群
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
 
 info:
   groupId: $project.groupId$

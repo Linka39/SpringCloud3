@@ -2,10 +2,13 @@ package com.linka39.controller;
 
 import com.linka39.entity.Student;
 import com.linka39.service.StudentService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 服务提供者-学生信息控制器
@@ -66,5 +69,28 @@ public class StudentProviderController {
         }catch(Exception e){
             return false;
         }
+    }
+
+    /**
+     * 获取信息
+     * @return
+     * @throws InterruptedException
+     */
+    @GetMapping(value="/getInfo")
+    @HystrixCommand(fallbackMethod="getInfoFallback")
+    public Map<String,Object> getInfo() throws InterruptedException{
+        //hystrix默认1秒就会超时
+        Thread.sleep(2000);
+        Map<String,Object> map=new HashMap<String,Object>();
+        map.put("code", 200);
+        map.put("info", "业务数据xxx正常");
+        return map;
+    }
+
+    public Map<String,Object> getInfoFallback() throws InterruptedException{
+        Map<String,Object> map=new HashMap<String,Object>();
+        map.put("code", 500);
+        map.put("info", "系统出错，稍后重试");
+        return map;
     }
 }
