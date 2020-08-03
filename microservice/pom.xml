@@ -67,5 +67,7 @@
     <module>microservice-euraka-server-1083</module>
       <module>microservice-euraka-server-1084</module>
       <module>microservice-euraka-server-1085</module>
+      <module>microservice-student-provider-1003</module>
+      <module>microservice-student-provider-1004</module>
   </modules>
 </project>

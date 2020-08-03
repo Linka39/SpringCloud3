@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="microservice-student-provider-1003" />
+        <module name="microservice-student-provider-1004" />
         <module name="microservice-student-consumer-2001" />
         <module name="microservice-common" />
-        <module name="microservice-student-provider-1001" />
+        <module name="microservice-euraka-server-1085" />
         <module name="microservice-euraka-server-1084" />
         <module name="microservice-euraka-server-1083" />
-        <module name="microservice-euraka-server-1085" />
+        <module name="microservice-student-provider-1001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="microservice-euraka-server-1085" target="1.8" />
       <module name="microservice-student-consumer-2001" target="1.8" />
       <module name="microservice-student-provider-1001" target="1.8" />
+      <module name="microservice-student-provider-1003" target="1.8" />
+      <module name="microservice-student-provider-1004" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

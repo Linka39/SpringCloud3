@@ -21,8 +21,8 @@ public class StudentConsumerController {
 
 	@Autowired
 	private RestTemplate restTemplate;
-
-	private final static String PRE_HOST="http://localhost:1002";
+    //访问服务提供者时是按 大写字符访问的
+	private final static String PRE_HOST="http://MICROSERVICE-STUDENT";
 
     /**
      * 添加或者修改学生信息

@@ -1,5 +1,5 @@
 server:
-  port: 1002
+  port: 1003
   context-path: /
 
 # 数据源配置
@@ -21,7 +21,7 @@ eureka:
   instance:
     hostname: localhost  #eureka客户端主机实例名称
     appname: microservice-student  #客户端服务名
-    instance-id: microservice-student:1001 #客户端实例名称
+    instance-id: microservice-student:1003 #客户端实例名称
     prefer-ip-address: true #显示IP
   client:
     service-url:
@@ -32,5 +32,5 @@ info:
   groupId: $project.groupId$
   artifactId: $project.artifactId$
   version: $project.version$
-  负责人: 张三
+  负责人: 王五
   联系电话: 110
