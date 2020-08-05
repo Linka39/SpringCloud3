@@ -1,6 +1,8 @@
 package com.linka39.controller;
 
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -60,4 +62,13 @@ public class StudentConsumerController {
         return restTemplate.getForObject(PRE_HOST+"/student/delete/"+id, Boolean.class);
     }
 
+    /**
+     * 根据id删除学生信息
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    @GetMapping(value="/getInfo")
+    public Map<String,Object> getInfo(){
+        return restTemplate.getForObject(PRE_HOST+"/student/getInfo/", Map.class);
+    }
 }

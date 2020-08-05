@@ -44,7 +44,7 @@ public class StudentProviderController {
      */
     @GetMapping(value="/list")
     public List<Student> list(){
-        System.out.println("list--1004");
+        System.out.println("list--1005");
         return studentService.list();
     }
 
@@ -80,17 +80,17 @@ public class StudentProviderController {
     @HystrixCommand(fallbackMethod="getInfoFallback")
     public Map<String,Object> getInfo() throws InterruptedException{
         //hystrix默认1秒就会超时
-        Thread.sleep(1500);
+        Thread.sleep(2000);
         Map<String,Object> map=new HashMap<String,Object>();
         map.put("code", 200);
-        map.put("info", "业务数据xxx正常-1004");
+        map.put("info", "业务数据xxx正常-1005");
         return map;
     }
 
     public Map<String,Object> getInfoFallback() throws InterruptedException{
         Map<String,Object> map=new HashMap<String,Object>();
         map.put("code", 500);
-        map.put("info", "系统出错，稍后重试-1004");
+        map.put("info", "系统出错，稍后重试-1005");
         return map;
     }
 }

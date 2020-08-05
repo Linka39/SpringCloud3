@@ -1,5 +1,5 @@
 server:
-  port: 1004
+  port: 1005
   context-path: /
 
 # 数据源配置
@@ -21,7 +21,7 @@ eureka:
   instance:
     hostname: localhost  #eureka客户端主机实例名称
     appname: microservice-student  #客户端服务名
-    instance-id: microservice-student-hystrix:1004 #客户端实例名称
+    instance-id: microservice-student-hystrix:1005 #客户端实例名称
     prefer-ip-address: true #显示IP
   client:
     service-url:

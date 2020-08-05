@@ -8,8 +8,6 @@
       <configuration>
         <webroots />
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/../microservice-student-consumer-2001/src/main/java" />
-          <root url="file://$MODULE_DIR$/../microservice-student-consumer-2001/src/main/resources" />
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>

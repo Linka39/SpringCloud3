@@ -70,5 +70,8 @@
       <module>microservice-student-provider-1003</module>
       <module>microservice-student-provider-1004</module>
       <module>microservice-student-consumer-2002-feign</module>
+      <module>microservice-student-consumer-hystrix-dashboard-2080</module>
+      <module>microservice-student-provider-hystrix-1005</module>
+      <module>microservice-student-consumer-hystrix-turbine-2090</module>
   </modules>
 </project>

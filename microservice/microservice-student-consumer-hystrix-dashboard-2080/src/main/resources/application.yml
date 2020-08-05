@@ -1,0 +1,3 @@
+server:
+  port: 2080
+  context-path: /

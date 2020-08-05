@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * FeignClient服务客户端（声明式Webservice）
@@ -45,4 +46,12 @@ public interface StudentClientService {
      */
     @GetMapping(value="/student/delete/{id}")
     public boolean delete(@PathVariable("id") Integer id);
+
+    /**
+     * 根据id删除学生信息
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    @GetMapping(value="/getInfo")
+    public Map<String,Object> getInfo();
 }

@@ -1,0 +1,16 @@
+server:
+  port: 2090
+  context-path: /
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://dd1.linka39.top:1083/eureka/,http://dd2.linka39.top:1084/eureka/ # 集群
+
+turbine:
+  app-config: microservice-student   # 指定要监控的应用名称(可以用逗号隔开，来监控多个应用)
+  clusterNameExpression: "'default'" #表示集群的名字为default
+
+spring:
+  application:
+    name: turbine
