@@ -2,6 +2,23 @@ server:
   port: 80
   context-path: /
 
+feign:
+  hystrix:
+    enabled: true
+# feign的底层是ribbon，需要改ribbon的读取超时配置
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 9000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
 eureka:
   client:
     register-with-eureka: false #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false

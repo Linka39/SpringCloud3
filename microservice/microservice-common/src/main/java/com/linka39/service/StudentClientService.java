@@ -15,7 +15,7 @@ import java.util.Map;
  * FeignClient服务客户端（声明式Webservice）
  * @author Administrator
  */
-@FeignClient(value = "MICROSERVICE-STUDENT")
+@FeignClient(value = "MICROSERVICE-STUDENT",fallbackFactory = StudentClientFallbackFactory.class)
 public interface StudentClientService {
     /**
      * 根据id查询学生信息
@@ -52,6 +52,7 @@ public interface StudentClientService {
      * @return
      */
     @SuppressWarnings("unchecked")
-    @GetMapping(value="/getInfo")
+    @GetMapping(value="/student/getInfo")
     public Map<String,Object> getInfo();
+
 }

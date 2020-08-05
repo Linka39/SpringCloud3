@@ -77,14 +77,12 @@ public class StudentProviderController {
      * @throws InterruptedException
      */
     @GetMapping(value="/getInfo")
-    @HystrixCommand(fallbackMethod="getInfoFallback")
+    //如果加上下面的注解，默认调用的是服务提供者的熔断器
+    //@HystrixCommand(fallbackMethod="getInfoFallback")
     public Map<String,Object> getInfo() throws InterruptedException{
         //hystrix默认1秒就会超时
-        Thread.sleep(2000);
-        Map<String,Object> map=new HashMap<String,Object>();
-        map.put("code", 200);
-        map.put("info", "业务数据xxx正常-1005");
-        return map;
+        Thread.sleep(1500);
+        return studentService.getInfo();
     }
 
     public Map<String,Object> getInfoFallback() throws InterruptedException{

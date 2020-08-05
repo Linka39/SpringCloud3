@@ -1,6 +1,7 @@
 package com.linka39.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import com.linka39.service.StudentClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,15 @@ public class StudentConsumerController {
     @GetMapping(value="/delete/{id}")
     public boolean delete(@PathVariable("id") Integer id){
         return studentClientService.delete(id);
+    }
+
+    /**
+     * 获取信息
+     * @return
+     */
+    @GetMapping(value="/getInfo2")
+    public Map<String,Object> getInfo() {
+        return studentClientService.getInfo();
     }
 
 }

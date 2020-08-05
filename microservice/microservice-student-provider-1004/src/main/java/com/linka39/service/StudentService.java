@@ -3,6 +3,7 @@ package com.linka39.service;
 import com.linka39.entity.Student;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 学生信息Service接口
@@ -37,4 +38,9 @@ public interface StudentService {
     public void delete(Integer id);
 
 
+    /**
+     * 获取信息
+     * @return
+     */
+    public Map<String,Object> getInfo();
 }

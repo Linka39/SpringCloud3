@@ -31,6 +31,6 @@ public class SpringCloudConfig {
 	 */
 	@Bean
 	public IRule myRule(){
-		return new RandomRule();
+		return new RetryRule();
 	}
 }
