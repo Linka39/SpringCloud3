@@ -73,5 +73,6 @@
       <module>microservice-student-consumer-hystrix-dashboard-2080</module>
       <module>microservice-student-provider-hystrix-1005</module>
       <module>microservice-student-consumer-hystrix-turbine-2090</module>
+      <module>microservice-zuul-3001</module>
   </modules>
 </project>

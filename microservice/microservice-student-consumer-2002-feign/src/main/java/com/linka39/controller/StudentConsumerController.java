@@ -64,6 +64,15 @@ public class StudentConsumerController {
      * @return
      */
     @GetMapping(value="/getInfo2")
+    public Map<String,Object> getInfo2() {
+        return studentClientService.getInfo();
+    }
+
+    /**
+     * 获取信息
+     * @return
+     */
+    @GetMapping(value="/getInfo")
     public Map<String,Object> getInfo() {
         return studentClientService.getInfo();
     }

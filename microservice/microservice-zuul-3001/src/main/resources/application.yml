@@ -1,0 +1,31 @@
+server:
+  port: 3001
+  context-path: /
+
+zuul:
+  ignored-services: "*"  # 过滤掉 按服务名称 访问的方式
+  routes:
+    demoServer.serviceId: microservice-student
+    demoServer.path: /studentServer/**  # 配置服务名称的访问路径
+  prefix: /linka39   # 加上访问前缀，一般是公司域名名称
+
+spring:
+  application:
+    name: microservice-zuul
+
+eureka:
+  instance:
+    instance-id: microservice-zuul:3001 #客户端实例名称
+    prefer-ip-address: true #显示IP
+  client:
+    register-with-eureka: true     #false 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己。
+    fetch-registry: true     #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
+    service-url:
+      defaultZone: http://dd1.linka39.top:1083/eureka/,http://dd2.linka39.top:1084/eureka/ # 集群
+
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  负责人: 王五
+  联系电话: 110

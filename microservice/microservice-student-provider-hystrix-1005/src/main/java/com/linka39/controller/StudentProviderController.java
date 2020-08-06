@@ -81,7 +81,7 @@ public class StudentProviderController {
     //@HystrixCommand(fallbackMethod="getInfoFallback")
     public Map<String,Object> getInfo() throws InterruptedException{
         //hystrix默认1秒就会超时
-        Thread.sleep(1500);
+//        Thread.sleep(1500);
         return studentService.getInfo();
     }
 
