@@ -9,7 +9,7 @@ server:
 
 # 数据源配置
 spring:
-  profiles: test
+  profiles: dev
   application:
     name: microservice-student  #定义应用的名称
   datasource:
